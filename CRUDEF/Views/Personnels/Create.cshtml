@@ -1,0 +1,93 @@
+﻿@model CRUDEF.Models.Personnel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Personnel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LName" class="control-label"></label>
+                <input asp-for="LName" class="form-control" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FName" class="control-label"></label>
+                <input asp-for="FName" class="form-control" />
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MName" class="control-label"></label>
+                <input asp-for="MName" class="form-control" />
+                <span asp-validation-for="MName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nickname" class="control-label"></label>
+                <input asp-for="Nickname" class="form-control" />
+                <span asp-validation-for="Nickname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpType" class="control-label"></label>
+                <input asp-for="EmpType" class="form-control" />
+                <span asp-validation-for="EmpType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ARank" class="control-label"></label>
+                <input asp-for="ARank" class="form-control" />
+                <span asp-validation-for="ARank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ABranch" class="control-label"></label>
+                <input asp-for="ABranch" class="form-control" />
+                <span asp-validation-for="ABranch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DliHire" class="control-label"></label>
+                <input asp-for="DliHire" class="form-control" />
+                <span asp-validation-for="DliHire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OfficePhone" class="control-label"></label>
+                <input asp-for="OfficePhone" class="form-control" />
+                <span asp-validation-for="OfficePhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location1" class="control-label"></label>
+                <input asp-for="Location1" class="form-control" />
+                <span asp-validation-for="Location1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location2" class="control-label"></label>
+                <input asp-for="Location2" class="form-control" />
+                <span asp-validation-for="Location2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AltOfficeSymbol" class="control-label"></label>
+                <input asp-for="AltOfficeSymbol" class="form-control" />
+                <span asp-validation-for="AltOfficeSymbol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
