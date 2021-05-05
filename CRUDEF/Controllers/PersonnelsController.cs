@@ -5,16 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CRUDEF.Context;
 using CRUDEF.Models;
 
 namespace CRUDEF.Controllers
 {
     public class PersonnelsController : Controller
     {
-        private readonly PersonnelContext _context;
+        private readonly PHRContext _context;
 
-        public PersonnelsController(PersonnelContext context)
+        public PersonnelsController(PHRContext context)
         {
             _context = context;
         }
@@ -34,7 +33,7 @@ namespace CRUDEF.Controllers
             }
 
             var personnel = await _context.Personnel
-                .FirstOrDefaultAsync(m => m.PersonnelId == id);
+                .FirstOrDefaultAsync(m => m.PersId == id);
             if (personnel == null)
             {
                 return NotFound();
@@ -88,7 +87,7 @@ namespace CRUDEF.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PersonnelId,LName,FName,MName,Nickname,EmpType,ARank,ABranch,Active,Email,DliHire,OfficePhone,Location1,Location2,AltOfficeSymbol")] Personnel personnel)
         {
-            if (id != personnel.PersonnelId)
+            if (id != personnel.PersId)
             {
                 return NotFound();
             }
@@ -102,7 +101,7 @@ namespace CRUDEF.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonnelExists(personnel.PersonnelId))
+                    if (!PersonnelExists(personnel.PersId))
                     {
                         return NotFound();
                     }
@@ -125,7 +124,7 @@ namespace CRUDEF.Controllers
             }
 
             var personnel = await _context.Personnel
-                .FirstOrDefaultAsync(m => m.PersonnelId == id);
+                .FirstOrDefaultAsync(m => m.PersId == id);
             if (personnel == null)
             {
                 return NotFound();
@@ -147,7 +146,7 @@ namespace CRUDEF.Controllers
 
         private bool PersonnelExists(int id)
         {
-            return _context.Personnel.Any(e => e.PersonnelId == id);
+            return _context.Personnel.Any(e => e.PersId == id);
         }
     }
 }

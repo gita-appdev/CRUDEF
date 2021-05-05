@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using CRUDEF.Context;
+using CRUDEF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace CRUDEF
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration.GetConnectionString("PHRDatabase");
-            services.AddDbContext<PersonnelContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<PHRContext>(options => options.UseSqlServer(connection));
             services.AddControllersWithViews();
         }
 

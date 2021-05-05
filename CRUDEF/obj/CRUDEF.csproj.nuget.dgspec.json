@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gitan\\OneDrive\\Desktop\\Project\\CRUDEF\\CRUDEF\\CRUDEF.csproj": {}
+    "C:\\Users\\sabrina.alonso\\source\\repos\\CRUDEF\\CRUDEF\\CRUDEF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gitan\\OneDrive\\Desktop\\Project\\CRUDEF\\CRUDEF\\CRUDEF.csproj": {
+    "C:\\Users\\sabrina.alonso\\source\\repos\\CRUDEF\\CRUDEF\\CRUDEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gitan\\OneDrive\\Desktop\\Project\\CRUDEF\\CRUDEF\\CRUDEF.csproj",
+        "projectUniqueName": "C:\\Users\\sabrina.alonso\\source\\repos\\CRUDEF\\CRUDEF\\CRUDEF.csproj",
         "projectName": "CRUDEF",
-        "projectPath": "C:\\Users\\gitan\\OneDrive\\Desktop\\Project\\CRUDEF\\CRUDEF\\CRUDEF.csproj",
-        "packagesPath": "C:\\Users\\gitan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gitan\\OneDrive\\Desktop\\Project\\CRUDEF\\CRUDEF\\obj\\",
+        "projectPath": "C:\\Users\\sabrina.alonso\\source\\repos\\CRUDEF\\CRUDEF\\CRUDEF.csproj",
+        "packagesPath": "C:\\Users\\sabrina.alonso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sabrina.alonso\\source\\repos\\CRUDEF\\CRUDEF\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gitan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sabrina.alonso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
